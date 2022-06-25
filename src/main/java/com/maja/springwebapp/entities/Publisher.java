@@ -19,6 +19,10 @@ public class Publisher {
     @ManyToMany
     private Set<Book> books=new HashSet<>();
 
+    public Publisher(){
+
+    }
+
     public Publisher(String name) {
         this.name = name;
     }
