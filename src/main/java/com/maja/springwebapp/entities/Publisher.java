@@ -11,8 +11,11 @@ public class Publisher {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String name;
-    @OneToOne
-    private Address address;
+    private String street;
+    private int number;
+    private String city;
+    private String state;
+    private String zipcode;
     @ManyToMany
     private Set<Book> books=new HashSet<>();
 
@@ -36,14 +39,6 @@ public class Publisher {
         this.name = name;
     }
 
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
-    }
-
     public Set<Book> getBooks() {
         return books;
     }
@@ -52,12 +47,57 @@ public class Publisher {
         this.books = books;
     }
 
+    public String getStreet() {
+        return street;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getZipcode() {
+        return zipcode;
+    }
+
+    public void setZipcode(String zipcode) {
+        this.zipcode = zipcode;
+    }
+
+
     @Override
     public String toString() {
         return "Publisher{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", address=" + address +
+                ", street='" + street + '\'' +
+                ", number=" + number +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zipcode='" + zipcode + '\'' +
                 ", books=" + books +
                 '}';
     }
