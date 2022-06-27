@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Spring Boot App Maja</title>
+</head>
+<body>
+<h1>Author List</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Firstname</th>
+    <th>Lastname</th>
+  </tr>
+  <tr th:each="author : ${authors}">
+    <td th:value="&{author.id}">12</td>
+    <td th:value="&{author.firstName}">Marija</td>
+    <td th:value="&{author.lastName}">Milic</td>
+  </tr>
+</table>
+</body>
+</html>
