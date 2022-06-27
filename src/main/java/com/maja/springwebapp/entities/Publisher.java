@@ -16,7 +16,7 @@ public class Publisher {
     private String city;
     private String state;
     private String zipcode;
-    @ManyToMany
+    @ManyToMany(mappedBy = "publishers")
     private Set<Book> books=new HashSet<>();
 
     public Publisher(){
@@ -102,7 +102,6 @@ public class Publisher {
                 ", city='" + city + '\'' +
                 ", state='" + state + '\'' +
                 ", zipcode='" + zipcode + '\'' +
-                ", books=" + books +
                 '}';
     }
 
