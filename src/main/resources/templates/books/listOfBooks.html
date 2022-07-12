@@ -14,9 +14,9 @@
     <th>Isbn</th>
   </tr>
   <tr th:each="book : ${books}">
-    <td th:value="${book.id}">123</td>
-    <td th:value="${book.title}">Spring in Action</td>
-    <td th:value="${book.isbn}">147258</td>
+    <td th:text="${book.id}">123</td>
+    <td th:text="${book.title}">Spring in Action</td>
+    <td th:text="${book.isbn}">147258</td>
   </tr>
 </table>
 </body>
