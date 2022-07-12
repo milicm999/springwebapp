@@ -32,11 +32,12 @@ public class BootstrapData implements CommandLineRunner {
 
         authorRepository.save(eric);
         bookRepository.save(book1);
+        publisherRepository.save(delfi);
 
         book1.getAuthors().add(eric);
         delfi.getBooks().add(book1);
         book1.getPublishers().add(delfi);
-        publisherRepository.save(delfi);
+
 
 
         Author rod=new Author("Rod","Johnson");
@@ -46,11 +47,12 @@ public class BootstrapData implements CommandLineRunner {
 
         authorRepository.save(rod);
         bookRepository.save(noEJB);
+        publisherRepository.save(p);
 
         noEJB.getAuthors().add(rod);
         p.getBooks().add(noEJB);
         noEJB.getPublishers().add(p);
-        publisherRepository.save(p);
+
 
 
         System.out.println("Started in Bootstrap");
